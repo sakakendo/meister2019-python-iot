@@ -1,0 +1,23 @@
+
+versiion: 2
+jobs:
+    build:
+        working_directorry: ~
+            - image: circleci/python:latest
+        steps:
+            - checkout
+            - run:
+                name: coding style check
+                command: |
+                    sudo pip3 install flake8
+                    flake8 .
+            - run:
+                name: install pip module
+                command: |
+                    sudo pip install --quiet -r requirements.txt
+            - run:
+                name: run pytest
+                working_directory: ./app
+                command: |
+                    sudo pip install pytest
+                    pytest
