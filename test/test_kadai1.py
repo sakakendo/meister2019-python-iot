@@ -1,3 +1,4 @@
+from kadai1 import hello
 
 def test_kadai1(capsys):
     hello()
