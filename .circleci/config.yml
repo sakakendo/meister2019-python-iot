@@ -18,5 +18,5 @@ jobs:
                 name: run style-check, pytest
                 command: |
                     . venv/bin/activate
-                    flake8
+                    flake8 src/ tests/
                     python3 -m pytest
