@@ -2,10 +2,12 @@
 versiion: 2
 jobs:
     build:
-        working_directorry: ~
+        docker:
             - image: circleci/python:latest
+        working_directorry: ~
         steps:
             - checkout
+          - restore_cache:
             - run:
                 name: coding style check
                 command: |
