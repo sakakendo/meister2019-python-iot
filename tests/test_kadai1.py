@@ -1,4 +1,4 @@
-from kadai1 import hello
+from src.kadai1.main import hello
 
 
 def test_kadai1(capsys):
